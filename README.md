@@ -1,6 +1,6 @@
 # portfolio with React Js
 
-### A portfolio has been created with react js. here you will find hero section, about me, projects, skill and contact.
+ A portfolio has been created with react js. here you will find hero section, about me, projects, skill and contact.
 
 ### Technologies i have used:
 
