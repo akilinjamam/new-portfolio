@@ -1,0 +1,17 @@
+.navBar {
+
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 10px;
+    position: fixed;
+    top: 200px;
+}
+
+.navBar li {
+    margin: 10px;
+}
+
+.uil {
+    color: orange;
+    font-size: 30px;
+}
