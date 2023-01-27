@@ -1,11 +1,72 @@
-import React from 'react';
+import Lottie from 'react-lottie';
+import smileData from '../../smile.json';
+import hiData from '../../hiData.json';
+import emoji1 from '../../emoji1.json';
+import emoji2 from '../../emoji2.json';
+
 import './Hero.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { useState } from 'react';
 // ..
 AOS.init();
 
 const Hero = ({ colors }) => {
+
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: smileData,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
+    const defaultOptions2 = {
+        loop: true,
+        autoplay: true,
+        animationData: hiData,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
+    const defaultOptions3 = {
+        loop: true,
+        autoplay: true,
+        animationData: emoji1,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
+    const defaultOptions4 = {
+        loop: true,
+        autoplay: true,
+        animationData: emoji2,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
+
+    const [view, setView] = useState(false);
+
+    let [answer, setAnswer] = useState(0)
+    console.log(view)
+
+    const handleClick = () => {
+        if (!view) {
+            setTimeout(() => {
+                setView(false)
+                console.log('Initial timeout!')
+            }, 4000)
+
+            setAnswer(++answer)
+            console.log(answer)
+            if (answer === 5) {
+                setAnswer(1)
+            }
+        }
+    }
+
+
     return (
         <div className='heroMain forBlock' id='hero'>
             <div className='heroContainer'>
@@ -40,7 +101,23 @@ const Hero = ({ colors }) => {
                         <p className='hero-documents-p'>I am working as a MERN-Stack developer. I am very passionate and dedicated to my work.</p>
                         <br /><br />
                         <div className='hero-Button'>
-                            <button className={colors ? colors : 'blue'} >Say Hello <i class="uil uil-location-arrow"></i> </button>
+                            <button onClick={() => handleClick(setView(true))} className={colors ? colors : 'blue'} >Say Hello <i class="uil uil-location-arrow"></i> </button>
+
+                        </div>
+
+                        <div className='hello'>
+                            <div className={view && answer === 1 ? 'block' : 'none'}>
+                                <Lottie style={{ display: 'inline-block' }} options={defaultOptions2} height={200} width={200} ></Lottie>
+                            </div>
+                            <div className={view && answer === 2 ? 'block' : 'none'}>
+                                <Lottie style={{ display: 'inline-block' }} options={defaultOptions} height={200} width={200} ></Lottie>
+                            </div>
+                            <div className={view && answer === 3 ? 'block' : 'none'}>
+                                <Lottie style={{ display: 'inline-block' }} options={defaultOptions3} height={200} width={200} ></Lottie>
+                            </div>
+                            <div className={view && answer === 4 ? 'block' : 'none'}>
+                                <Lottie style={{ display: 'inline-block' }} options={defaultOptions4} height={200} width={200} ></Lottie>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -10,7 +10,6 @@ import { useState } from 'react';
 
 function App() {
 
-
   let [theme, setTheme] = useState(1);
   const [colors, setColors] = useState('');
   console.log(theme)
