@@ -3,6 +3,7 @@ import smileData from '../../smile.json';
 import hiData from '../../hiData.json';
 import emoji1 from '../../emoji1.json';
 import emoji2 from '../../emoji2.json';
+import emoji3 from '../../emoji3.json';
 
 import './Hero.css'
 import AOS from 'aos';
@@ -45,6 +46,14 @@ const Hero = ({ colors }) => {
             preserveAspectRatio: 'xMidYMid slice'
         }
     };
+    const defaultOptions5 = {
+        loop: true,
+        autoplay: true,
+        animationData: emoji3,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
 
     const [view, setView] = useState(false);
 
@@ -60,7 +69,7 @@ const Hero = ({ colors }) => {
 
             setAnswer(++answer)
             console.log(answer)
-            if (answer === 5) {
+            if (answer === 6) {
                 setAnswer(1)
             }
         }
@@ -117,6 +126,9 @@ const Hero = ({ colors }) => {
                             </div>
                             <div className={view && answer === 4 ? 'block' : 'none'}>
                                 <Lottie style={{ display: 'inline-block' }} options={defaultOptions4} height={200} width={200} ></Lottie>
+                            </div>
+                            <div className={view && answer === 5 ? 'block' : 'none'}>
+                                <Lottie style={{ display: 'inline-block' }} options={defaultOptions5} height={200} width={200} ></Lottie>
                             </div>
                         </div>
                     </div>
