@@ -4,8 +4,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #000728;
+  /* background-color: #000728; */
   color: white;
+}
+
+.blue {
+  background-color: #000728;
+  transition: 1s ease-in-out;
+}
+
+.pumpkin {
+  background-color: #d35400;
+  transition: 1s ease-in-out;
+}
+
+.winterGreen {
+  background-color: #3ae374;
+  transition: 1s ease-in-out;
+}
+
+.gray {
+  background-color: #5f5e5b;
+  transition: 1s ease-in-out;
+}
+
+.crimson {
+  background-color: crimson;
+  transition: 1s ease-in-out;
 }
 
 html {

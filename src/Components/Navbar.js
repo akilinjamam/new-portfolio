@@ -1,7 +1,10 @@
 import React from 'react';
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = ({ handleColors }) => {
+
+
+
     return (
         <div>
             <ul className='navBar'>
@@ -19,6 +22,9 @@ const Navbar = () => {
                 </a>
                 <a href="#contact" title='contact'>
                     <li><i class="uil uil-envelope-download"></i></li>
+                </a>
+                <a onClick={handleColors} href=" " title='theme'>
+                    <li><i class="uil uil-palette"></i></li>
                 </a>
             </ul>
         </div>

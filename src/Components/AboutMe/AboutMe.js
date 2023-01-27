@@ -2,7 +2,7 @@ import React from 'react';
 import './AboutMe.css'
 import myImg from '../../resource/my photo.jpg'
 
-const AboutMe = () => {
+const AboutMe = ({ colors }) => {
 
     // Function will execute on click of button
     const onButtonClick = () => {
@@ -20,7 +20,7 @@ const AboutMe = () => {
         })
     }
     return (
-        <div className='aboutMeMain' id='about'>
+        <div className='aboutMeMain forBlock' id='about'>
             <br />
             <h2 className='aboutMeMain-h2'>ABOUT ME</h2>
             <br />
@@ -45,7 +45,7 @@ const AboutMe = () => {
                     </div>
                     <br /><br />
                     <div data-aos="fade-up" data-aos-duration="1000" className='aboutMe-button'>
-                        <button onClick={onButtonClick}>Download CV <i class="uil uil-file"></i> </button>
+                        <button className={colors ? colors : 'blue'} onClick={onButtonClick}>Download CV <i class="uil uil-file"></i> </button>
                     </div>
                 </div>
 

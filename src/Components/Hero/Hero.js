@@ -5,7 +5,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init();
 
-const Hero = () => {
+const Hero = ({ colors }) => {
     return (
         <div className='heroMain forBlock' id='hero'>
             <div className='heroContainer'>
@@ -40,7 +40,7 @@ const Hero = () => {
                         <p className='hero-documents-p'>I am working as a MERN-Stack developer. I am very passionate and dedicated to my work.</p>
                         <br /><br />
                         <div className='hero-Button'>
-                            <button>Say Hello <i class="uil uil-location-arrow"></i> </button>
+                            <button className={colors ? colors : 'blue'} >Say Hello <i class="uil uil-location-arrow"></i> </button>
                         </div>
                     </div>
                 </div>
