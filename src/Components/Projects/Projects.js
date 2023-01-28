@@ -44,7 +44,7 @@ const Projects = () => {
                 console.log('its working bro...');
                 window.open(link, " '_blank'")
                 setView(true)
-            }, 6000)
+            }, 4000)
 
             const intervalId = setInterval(() => {
                 setCounter((t) => {
