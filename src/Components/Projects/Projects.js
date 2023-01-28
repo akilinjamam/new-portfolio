@@ -48,12 +48,12 @@ const Projects = () => {
 
             const intervalId = setInterval(() => {
                 setCounter((t) => {
-                    if (t >= 1000) {
+                    if (t >= 1100) {
                         clearInterval(intervalId)
                         setCounter(800)
                     };
 
-                    return (t < 1000) ? t + 1 : t;
+                    return (t < 1100) ? t + 1 : t;
                 });
             }, 1);
             return () => (clearInterval(intervalId))
