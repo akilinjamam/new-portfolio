@@ -160,3 +160,38 @@
     background-color: blue;
     transform: translateX(-50%) rotate(45deg);
 }
+
+.resSkill {
+    display: none;
+}
+
+.webSkill {
+    display: block;
+}
+
+@media screen and (max-width: 500px) {
+
+    .resSkill {
+        display: block;
+    }
+
+    .webSkill {
+        display: none;
+    }
+
+    .skill {
+        height: 170vh;
+    }
+
+    .skill-main {
+        height: auto;
+    }
+
+    .grid-container {
+        grid-template-columns: auto;
+    }
+
+    .container {
+        max-width: 270px;
+    }
+}

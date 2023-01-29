@@ -44,16 +44,16 @@ const Projects = () => {
                 console.log('its working bro...');
                 window.open(link, " '_blank'")
                 setView(true)
-            }, 4000)
+            }, 3000)
 
             const intervalId = setInterval(() => {
                 setCounter((t) => {
-                    if (t >= 1100) {
+                    if (t >= 1200) {
                         clearInterval(intervalId)
                         setCounter(800)
                     };
 
-                    return (t < 1100) ? t + 1 : t;
+                    return (t < 1200) ? t + 1 : t;
                 });
             }, 1);
             return () => (clearInterval(intervalId))
@@ -64,46 +64,100 @@ const Projects = () => {
     return (
         <div className='projects forBlock' id='projects'>
             <br />
-            <div style={{ position: 'relative' }}>
-                <h2 className="projectsMain-title">PROJECTS</h2>
-                {counter > 800 && <div style={{ position: "absolute", top: "-20px", left: `${counter}px` }}> <Lottie style={{ display: 'inline-block' }} options={defaultOptions} height={140} width={140} ></Lottie></div>}
+            <div className='webProjects'>
+                <div style={{ position: 'relative' }}>
+                    <h2 className="projectsMain-title">PROJECTS</h2>
+                    {counter > 800 && <div style={{ position: "absolute", top: "-20px", left: `${counter}px` }}> <Lottie style={{ display: 'inline-block' }} options={defaultOptions} height={140} width={140} ></Lottie></div>}
+                </div>
+                <br />
+                <div className='projects-main'>
+                    <div data-aos="flip-right" data-aos-duration="1000" className="project-container">
+
+                        <img className="project-img" src={websiteOne} alt="" />
+
+                        <div className="project-detail">
+                            <h3>Royal Auto Parts</h3>
+                            <p>The website is about manufactured car parts. where retailer can order their a maximum available parts with using online payment method. here is also a dashbord for controlling by admin. where the access is secured. visit website to more detail </p>
+
+                            <button onClick={() => handleClick(link1)} className='project-button'> visit website </button>
+                        </div>
+                    </div>
+                    <div data-aos="flip-up" data-aos-duration="1000" className="project-container">
+
+                        <img className="project-img" src={websiteTwo} alt="" />
+
+                        <div className="project-detail">
+                            <h3>Exertion</h3>
+                            <p>
+                                This website is for car wherehouse. where the buyer can order there car. He can store his order in his cart. and the admin can see remaining quantity after purchased. and can also include car quantites manually from website. tho know more visit website.
+                            </p>
+                            <button onClick={() => handleClick(link2)} className='project-button'> visit website </button>
+                        </div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="1000" className="project-container">
+
+                        <img className="project-img" src={websitethree} alt="" />
+
+                        <div className="project-detail">
+                            <h3>Travelbea</h3>
+                            <p>
+                                This website is relating with Travel and Tourism where visitor can see and select their place where they want to visit. Also can choose different class for traveling with different facilities. To know more visit website with detail information.
+                            </p>
+
+                            <button onClick={() => handleClick(link3)} className='project-button'> visit website </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <br />
-            <div className='projects-main'>
-                <div data-aos="flip-right" data-aos-duration="1000" className="project-container">
 
-                    <img className="project-img" src={websiteOne} alt="" />
 
-                    <div className="project-detail">
-                        <h3>Royal Auto Parts</h3>
-                        <p>The website is about manufactured car parts. where retailer can order their a maximum available parts with using online payment method. here is also a dashbord for controlling by admin. where the access is secured. visit website to more detail </p>
 
-                        <button onClick={() => handleClick(link1)} className='project-button'> visit website </button>
-                    </div>
+
+
+
+
+            <div className='resProjects'>
+                <div style={{ position: 'relative' }}>
+                    <h2 className="projectsMain-title">PROJECTS</h2>
+                    {counter > 800 && <div style={{ position: "absolute", top: "-20px", left: `${counter}px` }}> <Lottie style={{ display: 'inline-block' }} options={defaultOptions} height={140} width={140} ></Lottie></div>}
                 </div>
-                <div data-aos="flip-up" data-aos-duration="1000" className="project-container">
+                <br />
+                <div className='projects-main'>
+                    <div className="project-container">
 
-                    <img className="project-img" src={websiteTwo} alt="" />
+                        <img className="project-img" src={websiteOne} alt="" />
 
-                    <div className="project-detail">
-                        <h3>Exertion</h3>
-                        <p>
-                            This website is for car wherehouse. where the buyer can order there car. He can store his order in his cart. and the admin can see remaining quantity after purchased. and can also include car quantites manually from website. tho know more visit website.
-                        </p>
-                        <button onClick={() => handleClick(link2)} className='project-button'> visit website </button>
+                        <div className="project-detail">
+                            <h3>Royal Auto Parts</h3>
+                            <p>The website is about manufactured car parts. where retailer can order their a maximum available parts with using online payment method. here is also a dashbord for controlling by admin. where the access is secured. visit website to more detail </p>
+
+                            <button onClick={() => handleClick(link1)} className='project-button'> visit website </button>
+                        </div>
                     </div>
-                </div>
-                <div data-aos="flip-left" data-aos-duration="1000" className="project-container">
+                    <div className="project-container">
 
-                    <img className="project-img" src={websitethree} alt="" />
+                        <img className="project-img" src={websiteTwo} alt="" />
 
-                    <div className="project-detail">
-                        <h3>Travelbea</h3>
-                        <p>
-                            This website is relating with Travel and Tourism where visitor can see and select their place where they want to visit. Also can choose different class for traveling with different facilities. To know more visit website with detail information.
-                        </p>
+                        <div className="project-detail">
+                            <h3>Exertion</h3>
+                            <p>
+                                This website is for car wherehouse. where the buyer can order there car. He can store his order in his cart. and the admin can see remaining quantity after purchased. and can also include car quantites manually from website. tho know more visit website.
+                            </p>
+                            <button onClick={() => handleClick(link2)} className='project-button'> visit website </button>
+                        </div>
+                    </div>
+                    <div className="project-container">
 
-                        <button onClick={() => handleClick(link3)} className='project-button'> visit website </button>
+                        <img className="project-img" src={websitethree} alt="" />
+
+                        <div className="project-detail">
+                            <h3>Travelbea</h3>
+                            <p>
+                                This website is relating with Travel and Tourism where visitor can see and select their place where they want to visit. Also can choose different class for traveling with different facilities. To know more visit website with detail information.
+                            </p>
+
+                            <button onClick={() => handleClick(link3)} className='project-button'> visit website </button>
+                        </div>
                     </div>
                 </div>
             </div>

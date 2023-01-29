@@ -80,3 +80,44 @@
     height: 34px;
     width: 124px;
 }
+
+.webProjects {
+    display: block
+}
+
+.resProjects {
+    display: none;
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .webProjects {
+        display: none;
+    }
+
+    .resProjects {
+        display: block
+    }
+
+    .projects {
+        margin-top: 200px;
+        height: 160vh;
+    }
+
+    .projects-main {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .project-container {
+        height: 410px;
+        width: 260px;
+        margin-bottom: 30px;
+    }
+
+    .project-img {
+        width: 250px;
+        height: 150px;
+    }
+}

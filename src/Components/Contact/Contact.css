@@ -83,3 +83,35 @@ Form {
     padding: 20px;
     color: white;
 }
+
+.resContacts {
+    display: none
+}
+
+.webContacts {
+    display: block;
+}
+
+@media screen and (max-width: 500px) {
+    .webContacts {
+        display: none;
+    }
+
+    .resContacts {
+        display: block;
+    }
+
+    .contact-main {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .contact-detail {
+        width: 270px;
+    }
+
+    .contact-img img {
+        width: 270px;
+        margin-bottom: 30px;
+    }
+}

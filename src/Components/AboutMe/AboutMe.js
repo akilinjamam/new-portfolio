@@ -22,33 +22,69 @@ const AboutMe = ({ colors }) => {
     return (
         <div className='aboutMeMain forBlock' id='about'>
             <br />
-            <h2 className='aboutMeMain-h2'>ABOUT ME</h2>
-            <br />
-            <p className='aboutMeMain-p'>My Introduction</p>
-            <div className='aboutMeContainer'>
+            <div className='webAboutMe'>
+                <h2 className='aboutMeMain-h2'>ABOUT ME</h2>
+                <br />
+                <p className='aboutMeMain-p'>My Introduction</p>
+                <div className='aboutMeContainer'>
 
-                <div data-aos="zoom-in" data-aos-duration="1000" className='aboutMeImage'>
-                    <img src={myImg} alt="" />
-                </div>
-
-                <div className='aboutMeDetail'>
-                    <div data-aos="fade-right" data-aos-duration="1000" >
-                        <p>Hi! this is Injamam Islam Chowdhury. I am a MERN stack Developer. From Last year I have been coding with javascript, reactJs, redux, nodeJs, expressJs, mongoDB, Nextjs. I have done more projects with that technologies. I have also completed a full course with the technologies. I have got lots of experience doing those project. I am confident about my skills. So Now I am ready to deliver.    </p>
-                        <br />
-                        <p>
-                            I am used to take any challenges for doing any type of project. I am quick learner with heard worker, have dedication for problem solving. I am comfortable and confident to make successfull any mission.
-                        </p>
-                        <br />
-                        <p>
-                            I am very dedicated, passionate dynamic, punctual and time-concern about building my carrer in this sector.
-                        </p>
+                    <div data-aos="zoom-in" data-aos-duration="1000" className='aboutMeImage'>
+                        <img src={myImg} alt="" />
                     </div>
-                    <br /><br />
-                    <div data-aos="fade-up" data-aos-duration="1000" className='aboutMe-button'>
-                        <button className={colors ? colors : 'blue'} onClick={onButtonClick}>Download CV <i class="uil uil-file"></i> </button>
-                    </div>
-                </div>
 
+                    <div className='aboutMeDetail'>
+                        <div data-aos="fade-right" data-aos-duration="1000" >
+                            <p>Hi! this is Injamam Islam Chowdhury. I am a MERN stack Developer. From Last year I have been coding with javascript, reactJs, redux, nodeJs, expressJs, mongoDB, Nextjs. I have done more projects with that technologies. I have also completed a full course with the technologies. I have got lots of experience doing those project. I am confident about my skills. So Now I am ready to deliver.    </p>
+                            <br />
+                            <p>
+                                I am used to take any challenges for doing any type of project. I am quick learner with heard worker, have dedication for problem solving. I am comfortable and confident to make successfull any mission.
+                            </p>
+                            <br />
+                            <p>
+                                I am very dedicated, passionate dynamic, punctual and time-concern about building my carrer in this sector.
+                            </p>
+                        </div>
+                        <br /><br />
+                        <div data-aos="fade-up" data-aos-duration="1000" className='aboutMe-button'>
+                            <button className={colors ? colors : 'blue'} onClick={onButtonClick}>Download CV <i class="uil uil-file"></i> </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div className='resAboutMe'>
+                <h2 className='aboutMeMain-h2'>ABOUT ME</h2>
+                <br />
+                <p className='aboutMeMain-p'>My Introduction</p>
+                <div className='aboutMeContainer'>
+
+                    <div className='aboutMeImage'>
+                        <img src={myImg} alt="" />
+                    </div>
+
+                    <div className='aboutMeDetail'>
+                        <div  >
+                            <p>Hi! this is Injamam Islam Chowdhury. I am a MERN stack Developer. From Last year I have been coding with javascript, reactJs, redux, nodeJs, expressJs, mongoDB, Nextjs. I have done more projects with that technologies. I have also completed a full course with the technologies. I have got lots of experience doing those project. I am confident about my skills. So Now I am ready to deliver.    </p>
+                            <br />
+                            <p>
+                                I am used to take any challenges for doing any type of project. I am quick learner with heard worker, have dedication for problem solving. I am comfortable and confident to make successfull any mission.
+                            </p>
+                            <br />
+                            <p>
+                                I am very dedicated, passionate dynamic, punctual and time-concern about building my carrer in this sector.
+                            </p>
+                        </div>
+                        <br /><br />
+                        <div className='aboutMe-button'>
+                            <button className={colors ? colors : 'blue'} onClick={onButtonClick}>Download CV <i class="uil uil-file"></i> </button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     );

@@ -77,42 +77,47 @@ html {
 
 
 
-@media screen and (max-width: 992px) {
-  #hero {
-    display: none;
+@media screen and (max-width: 500px) {
+
+  html {
+    scroll-behavior: smooth;
   }
 
-  #about {
+  /* #hero {
     display: none;
+  } */
+
+  #about {
+    display: block;
   }
 
   #projects {
-    display: none;
+    display: block;
   }
 
   #contact {
-    display: none;
+    display: block;
   }
 
   #skills {
-    display: none;
+    display: block;
   }
 }
 
 @media screen and (max-width: 768px) {
   .forBlock {
-    display: none;
+    display: block;
   }
 }
 
 @media screen and (max-width: 576px) {
   .forBlock {
-    display: none;
+    display: block;
   }
 }
 
 @media screen and (max-width: 350px) {
   .forBlock {
-    display: none;
+    display: block;
   }
 }

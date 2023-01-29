@@ -63,3 +63,41 @@
     align-items: center;
     justify-content: center;
 }
+
+.webAboutMe {
+    display: block;
+}
+
+.resAboutMe {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+
+    .webAboutMe {
+        display: none;
+    }
+
+    .resAboutMe {
+        display: block;
+    }
+
+
+    .aboutMeContainer {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .aboutMeImage img {
+        height: 250px;
+        width: 250px;
+        margin-bottom: 30px;
+    }
+
+    .aboutMeDetail {
+        width: 280px;
+        margin-left: 25px;
+        text-align: center;
+    }
+
+}

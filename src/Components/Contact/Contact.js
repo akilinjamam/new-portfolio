@@ -35,44 +35,95 @@ const Contact = () => {
     return (
         <div className='contacts forBlock' id='contact'>
             <br />
-            <h2 className="contact-h2">CONTACT</h2>
-            <div className="contact-main">
-                <div data-aos='fade-right' data-aos-duration='1000' className="contact-img">
-                    <img src={contactPic} alt="" />
-                </div>
+            <div className='webContacts'>
+                <h2 className="contact-h2">CONTACT</h2>
+                <div className="contact-main">
 
-                <div data-aos='fade-left' data-aos-duration='1000' className="contact-detail">
-                    <Form onSubmit={handleOnSubmit}>
-                        <Form.Field
-                            id='form-input-control-email'
-                            control={Input}
-                            label='Email'
-                            name='to_name'
-                            placeholder='Email…'
-                            required
-                            icon='mail'
-                            iconPosition='left'
-                        />
-                        <Form.Field
-                            id='form-input-control-last-name'
-                            control={Input}
-                            label='Name'
-                            name='from_name'
-                            placeholder='Name…'
-                            required
-                            icon='user circle'
-                            iconPosition='left'
-                        />
-                        <Form.Field
-                            id='form-textarea-control-opinion'
-                            control={TextArea}
-                            label='Message'
-                            name='message'
-                            placeholder='Message…'
-                            required
-                        />
-                        <Button type='submit' color='green'>Submit</Button>
-                    </Form>
+                    <div data-aos='fade-right' data-aos-duration='1000' className="contact-img">
+                        <img src={contactPic} alt="" />
+                    </div>
+
+                    <div data-aos='fade-left' data-aos-duration='1000' className="contact-detail">
+                        <Form onSubmit={handleOnSubmit}>
+                            <Form.Field
+                                id='form-input-control-email'
+                                control={Input}
+                                label='Email'
+                                name='to_name'
+                                placeholder='Email…'
+                                required
+                                icon='mail'
+                                iconPosition='left'
+                            />
+                            <Form.Field
+                                id='form-input-control-last-name'
+                                control={Input}
+                                label='Name'
+                                name='from_name'
+                                placeholder='Name…'
+                                required
+                                icon='user circle'
+                                iconPosition='left'
+                            />
+                            <Form.Field
+                                id='form-textarea-control-opinion'
+                                control={TextArea}
+                                label='Message'
+                                name='message'
+                                placeholder='Message…'
+                                required
+                            />
+                            <Button type='submit' color='green'>Submit</Button>
+                        </Form>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div className='resContacts'>
+                <h2 className="contact-h2">CONTACT</h2>
+                <div className="contact-main">
+                    {/*  data-aos='fade-right' data-aos-duration='1000'  */}
+                    <div className="contact-img">
+                        <img src={contactPic} alt="" />
+                    </div>
+                    {/* data-aos='fade-left' data-aos-duration='1000' */}
+                    <div className="contact-detail">
+                        <Form onSubmit={handleOnSubmit}>
+                            <Form.Field
+                                id='form-input-control-email'
+                                control={Input}
+                                label='Email'
+                                name='to_name'
+                                placeholder='Email…'
+                                required
+                                icon='mail'
+                                iconPosition='left'
+                            />
+                            <Form.Field
+                                id='form-input-control-last-name'
+                                control={Input}
+                                label='Name'
+                                name='from_name'
+                                placeholder='Name…'
+                                required
+                                icon='user circle'
+                                iconPosition='left'
+                            />
+                            <Form.Field
+                                id='form-textarea-control-opinion'
+                                control={TextArea}
+                                label='Message'
+                                name='message'
+                                placeholder='Message…'
+                                required
+                            />
+                            <Button type='submit' color='green'>Submit</Button>
+                        </Form>
+                    </div>
                 </div>
             </div>
         </div>
