@@ -75,49 +75,50 @@ html {
 
 /* break points */
 
+@media screen and (min-width: 1281px) {
+  #warning {
+    display: none;
+  }
+}
 
+@media screen and (max-width: 376px) {
+  #warning {
+    display: none;
+  }
 
-@media screen and (max-width: 500px) {
+}
+
+@media screen and (min-width: 377px) and (max-width: 1280px) {
 
   html {
     scroll-behavior: smooth;
   }
 
-  /* #hero {
+  #hero {
     display: none;
-  } */
+  }
 
   #about {
-    display: block;
+    display: none;
   }
 
   #projects {
-    display: block;
+    display: none;
   }
 
   #contact {
-    display: block;
+    display: none;
   }
 
   #skills {
-    display: block;
+    display: none;
   }
-}
 
-@media screen and (max-width: 768px) {
-  .forBlock {
-    display: block;
+  #navbar {
+    display: none;
   }
-}
 
-@media screen and (max-width: 576px) {
-  .forBlock {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .forBlock {
+  #warning {
     display: block;
   }
 }

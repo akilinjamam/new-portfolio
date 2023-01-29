@@ -67,7 +67,7 @@ const Projects = () => {
             <div className='webProjects'>
                 <div style={{ position: 'relative' }}>
                     <h2 className="projectsMain-title">PROJECTS</h2>
-                    {counter > 800 && <div style={{ position: "absolute", top: "-20px", left: `${counter}px` }}> <Lottie style={{ display: 'inline-block' }} options={defaultOptions} height={140} width={140} ></Lottie></div>}
+                    {counter > 800 && <div className='animation' style={{ position: "absolute", top: "-20px", left: `${counter}px` }}> <Lottie style={{ display: 'inline-block' }} options={defaultOptions} height={140} width={140} ></Lottie></div>}
                 </div>
                 <br />
                 <div className='projects-main'>

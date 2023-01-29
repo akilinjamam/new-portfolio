@@ -92,26 +92,36 @@ Form {
     display: block;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 380px) {
+
+    .contacts {
+        height: 130vh;
+    }
+
     .webContacts {
         display: none;
     }
 
     .resContacts {
         display: block;
+
     }
 
     .contact-main {
         flex-wrap: wrap;
         justify-content: space-around;
+
     }
 
     .contact-detail {
-        width: 270px;
+        width: 220px;
     }
 
     .contact-img img {
-        width: 270px;
+        width: 220px;
         margin-bottom: 30px;
     }
+
+
+
 }

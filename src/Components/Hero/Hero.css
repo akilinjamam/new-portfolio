@@ -123,7 +123,17 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+
+.webHero {
+    display: block;
+}
+
+.resHero {
+    display: none;
+}
+
+
+@media screen and (max-width: 380px) {
 
 
 
@@ -136,13 +146,23 @@
         overflow-x: hidden;
     }
 
-    /* .heroMain {
-        padding-top: 100px;
-    } */
+    .webHero {
+        display: none;
+    }
+
+    .resHero {
+        display: block;
+    }
+
+    .heroMain {
+        padding-top: 140px;
+        height: 130vh;
+    }
 
     .heroContainer {
         display: flex;
         flex-wrap: wrap-reverse;
+
     }
 
     .hero-detail {
@@ -163,8 +183,16 @@
         font-size: 20px;
     }
 
+    .hero-img {
+        height: 280px;
+        width: 280px;
+        margin-left: 20px;
+        margin-top: 100px;
+    }
+
     .hello {
-        left: 140px
+        left: 165px;
+        top: 245px;
     }
 
 }

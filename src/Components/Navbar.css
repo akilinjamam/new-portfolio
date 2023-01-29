@@ -16,10 +16,10 @@
     font-size: 30px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 380px) {
 
     .navBar {
-        top: 300px;
+        top: 200px;
     }
 
 }

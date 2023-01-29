@@ -7,6 +7,7 @@ import Projects from './Components/Projects/Projects';
 import Contact from './Components/Contact/Contact';
 import Footer from './Components/Footer/Footer';
 import { useState } from 'react';
+import Warning from './Warning';
 
 function App() {
 
@@ -56,6 +57,7 @@ function App() {
         <Projects></Projects>
         <Skills></Skills>
         <Contact></Contact>
+        <Warning></Warning>
         {/* <Footer></Footer> */}
       </div>
     </div>

@@ -2,11 +2,8 @@ import React from 'react';
 import './Navbar.css'
 
 const Navbar = ({ handleColors }) => {
-
-
-
     return (
-        <div>
+        <div id='navbar'>
             <ul className='navBar'>
                 <a href="#hero" title='home'>
                     <li><i class="uil uil-home"></i></li>
