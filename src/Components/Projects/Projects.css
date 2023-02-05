@@ -11,6 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 1s ease-in-out;
 }
 
 .projectsMain-title {
@@ -89,6 +90,25 @@
     display: none;
 }
 
+.mainDot {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.dotIcon {
+    font-size: 40px;
+
+
+}
+
+.bigIcon {
+    font-size: 60px;
+    color: orange;
+}
+
 
 @media screen and (max-width: 380px) {
 
@@ -102,7 +122,7 @@
 
     .projects {
         margin-top: 300px;
-        height: 210vh;
+        height: 90vh;
     }
 
     .projects-main {
