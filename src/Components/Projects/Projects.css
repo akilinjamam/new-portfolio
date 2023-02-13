@@ -99,14 +99,11 @@
 }
 
 .dotIcon {
-    font-size: 40px;
-
-
+    font-size: 15px;
 }
 
 .bigIcon {
-    font-size: 60px;
-    color: orange;
+    border-bottom: 2px solid orange;
 }
 
 

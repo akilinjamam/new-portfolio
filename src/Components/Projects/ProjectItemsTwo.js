@@ -1,17 +1,17 @@
 import React from 'react';
-import { useEffect } from 'react';
+
 import websiteOne from '../../imagesProjectsTwo/avatar-from-daisy-bear.png'
 import websiteTwo from '../../imagesProjectsTwo/watch-gallery.png'
 import websitethree from '../../imagesProjectsTwo/simple-calculator.png'
 
 
-const ProjectItemsTwo = ({ handleClick }) => {
+const ProjectItemsTwo = ({ handleClick, setProjectNo, setSeconds }) => {
 
     let link1 = "https://super-froyo-9cd0c4.netlify.app/"
-    let link2 = "https://exertion-7d317.firebaseapp.com/"
-    let link3 = "https://travelbea-80478.firebaseapp.com/"
+    let link2 = "https://heroic-croissant-3591cc.netlify.app/"
+    let link3 = "https://friendly-marigold-ce415b.netlify.app/"
     return (
-        <div>
+        <div onMouseEnter={() => setProjectNo(2)} onMouseLeave={() => setSeconds(2)}>
             <div className='projects-main'>
                 <div data-aos="fade-right" data-aos-duration="1000" className="project-container">
 

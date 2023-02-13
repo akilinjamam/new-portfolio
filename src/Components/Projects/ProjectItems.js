@@ -1,12 +1,12 @@
 import React from 'react';
-import { useEffect } from 'react';
+
 import websiteOne from '../../resource/website-1.png'
 import websiteTwo from '../../resource/website-2.png'
 import websitethree from '../../resource/website-3.png'
 
 
 
-const ProjectItems = ({ handleClick }) => {
+const ProjectItems = ({ handleClick, setProjectNo, setSeconds }) => {
 
     let link1 = "https://the-royal-autoparts.web.app/"
     let link2 = "https://exertion-7d317.firebaseapp.com/"
@@ -14,7 +14,7 @@ const ProjectItems = ({ handleClick }) => {
 
     return (
 
-        <div>
+        <div onMouseEnter={() => setProjectNo(1)} onMouseLeave={() => setSeconds(1)} >
             <div className='projects-main'>
                 <div data-aos="flip-right" data-aos-duration="1000" className="project-container">
 

@@ -29,12 +29,13 @@ const Projects = () => {
 
     const [counter, setCounter] = useState(800);
     const [view, setView] = useState(true);
-
-
-    const [seconds, setSeconds] = useState(1);
+    let [seconds, setSeconds] = useState(1);
     const [secondsForRes, setSecondsForRes] = useState(1);
+    const [stop, setStop] = useState(false)
+    const [projectNo, setProjectNo] = useState(1)
 
 
+    console.log(counter)
 
     if (seconds === 3) {
         setSeconds(1)
@@ -50,6 +51,7 @@ const Projects = () => {
         return () => clearInterval(interval);
     }, []);
 
+
     useEffect(() => {
         const interval = setInterval(() => {
             setSecondsForRes(seconds => seconds + 1);
@@ -57,19 +59,8 @@ const Projects = () => {
         return () => clearInterval(interval);
     }, []);
 
-    console.log(seconds);
-
-    console.log('counter:', counter)
-
-
-    console.log(view)
-
-
-
-
     const handleClick = (link) => {
         console.log(link)
-
 
         if (view) {
             setTimeout(() => {
@@ -77,7 +68,6 @@ const Projects = () => {
                 window.open(link, " '_blank'")
                 setView(true)
             }, 3000)
-
             const intervalId = setInterval(() => {
                 setCounter((t) => {
                     if (t >= 1200) {
@@ -94,40 +84,65 @@ const Projects = () => {
 
     const handlDot = (data) => {
         setSeconds(data);
-        console.log(data, 'hello brother')
     }
     const handlDotRes = (data) => {
         setSecondsForRes(data);
-        console.log(data, 'hello brother')
+    }
+
+    const projectOne = <ProjectItems setSeconds={setSeconds} setProjectNo={setProjectNo} handleClick={handleClick} ></ProjectItems>
+    const projectTwo = <ProjectItemsTwo setSeconds={setSeconds} setProjectNo={setProjectNo} handleClick={handleClick} ></ProjectItemsTwo>
+
+    const handleHover = (data) => {
+        setStop(data);
+        if (data === true) {
+            setSeconds(seconds)
+        }
     }
 
 
     return (
         <div className='projects forBlock' id='projects'>
             <br />
-            <div className='webProjects'>
+            <div className='webProjects' >
                 <div style={{ position: 'relative' }}>
                     <h2 className="projectsMain-title">PROJECTS</h2>
                     {counter > 800 && <div className='animation' style={{ position: "absolute", top: "-20px", left: `${counter}px` }}> <Lottie style={{ display: 'inline-block' }} options={defaultOptions} height={140} width={140} ></Lottie></div>}
                 </div>
                 <br />
-                {seconds === 1 && <ProjectItems handleClick={handleClick} ></ProjectItems>}
-                {seconds === 2 && <ProjectItemsTwo handleClick={handleClick} ></ProjectItemsTwo>}
+                <div onMouseEnter={() => handleHover(true)} onMouseLeave={() => handleHover(false)} >
+                    {!stop ?
+                        <div>
+                            {seconds === 1 && projectOne}
+                            {seconds === 2 && projectTwo}
+                        </div>
+                        :
+                        <div>
+                            {projectNo === 1 && projectOne}
+                            {projectNo === 2 && projectTwo}
+                        </div>
+                    }
+
+                </div>
 
                 <div className='mainDot'>
                     <div className='dotIcon'>
-                        <span onClick={() => handlDot(1)} style={{ marginRight: '10px', cursor: 'pointer' }} className={seconds === 1 && 'bigIcon'}>.</span>
+                        {
+                            !stop ?
+                                <div>
+                                    <span onClick={() => handlDot(1)} style={{ marginRight: '30px', paddingBottom: '10px', cursor: 'pointer' }} className={seconds === 1 && 'bigIcon'}>Long Projects</span>
 
-                        <span style={{ cursor: 'pointer' }} onClick={() => handlDot(2)} className={seconds === 2 && 'bigIcon'} >.</span>
+                                    <span style={{ cursor: 'pointer', paddingBottom: '10px' }} onClick={() => handlDot(2)} className={seconds === 2 && 'bigIcon'} >Simple Projects</span>
+                                </div>
+                                :
+                                <div>
+                                    {<span onClick={() => handlDot(1)} style={{ marginRight: '30px', paddingBottom: '10px', cursor: 'pointer' }} className={projectNo === 1 && 'bigIcon'}>Long Projects</span>}
+
+                                    {<span style={{ cursor: 'pointer', paddingBottom: '10px' }} onClick={() => handlDot(2)} className={projectNo === 2 && 'bigIcon'} >Simple Projects</span>}
+                                </div>
+                        }
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
 
             <div className='resProjects'>
                 <div style={{ position: 'relative' }}>

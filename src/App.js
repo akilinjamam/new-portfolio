@@ -5,7 +5,6 @@ import AboutMe from './Components/AboutMe/AboutMe';
 import Skills from './Components/Skills/Skills';
 import Projects from './Components/Projects/Projects';
 import Contact from './Components/Contact/Contact';
-import Footer from './Components/Footer/Footer';
 import { useState } from 'react';
 import Warning from './Warning';
 
