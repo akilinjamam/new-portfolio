@@ -3,6 +3,9 @@ import { useEffect } from 'react';
 import websiteOne from '../../resource/website-1.png'
 import websiteTwo from '../../resource/website-2.png'
 import websitethree from '../../resource/website-3.png'
+import websiteFour from '../../resource/work1.jpg'
+import websiteFive from '../../resource/work2.jpg'
+import websiteSix from '../../resource/work3.jpg'
 
 import Lottie from 'react-lottie';
 import cyclerData from '../../cycler.json'
@@ -40,10 +43,11 @@ const Projects = () => {
     if (seconds === 3) {
         setSeconds(1)
     }
-    if (secondsForRes === 4) {
+    if (secondsForRes === 7) {
         setSecondsForRes(1)
-    }
 
+    }
+    console.log(secondsForRes)
     useEffect(() => {
         const interval = setInterval(() => {
             setSeconds(seconds => seconds + 1);
@@ -55,7 +59,7 @@ const Projects = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setSecondsForRes(seconds => seconds + 1);
-        }, 4000);
+        }, 5000);
         return () => clearInterval(interval);
     }, []);
 
@@ -194,13 +198,63 @@ const Projects = () => {
                         </div>
                     }
 
+                    {
+                        secondsForRes === 4 && <div className="project-container">
+
+                            <img className="project-img" src={websiteFour} alt="" />
+
+                            <div className="project-detail">
+                                <h3>Avatar from Dicebear</h3>
+                                <p>Here you can see different avatars which is taken from Dice bear API</p>
+
+                                <button onClick={() => handleClick(link1)} className='project-button'> visit website </button>
+                            </div>
+                        </div>
+                    }
+
+                    {secondsForRes === 5 && <div className="project-container">
+
+                        <img className="project-img" src={websiteFive} alt="" />
+
+                        <div className="project-detail">
+                            <h3>Watch Gallery</h3>
+                            <p>
+                                This is very small project where you can choose four watch and if you click on the button choose one for me then it will pick one from four.
+                            </p>
+                            <button onClick={() => handleClick(link2)} className='project-button'> visit website </button>
+                        </div>
+                    </div>
+                    }
+
+                    {secondsForRes === 6 &&
+                        <div className="project-container">
+
+                            <img className="project-img" src={websiteSix} alt="" />
+
+                            <div className="project-detail">
+                                <h3>Simple calculator</h3>
+                                <p>
+                                    this is a simple calculator where you can do basic calculations.
+                                </p>
+
+                                <button onClick={() => handleClick(link3)} className='project-button'> visit website </button>
+                            </div>
+                        </div>
+                    }
+
                     <div className='mainDot'>
-                        <div className='dotIcon'>
-                            <span onClick={() => handlDotRes(1)} style={{ marginRight: '10px', cursor: 'pointer' }} className={secondsForRes === 1 && 'bigIcon'}>.</span>
+                        <div className='dotIconRes'>
+                            <span onClick={() => handlDotRes(1)} style={{ marginRight: '10px', cursor: 'pointer' }} className={secondsForRes === 1 && 'bigIconRes'}>.</span>
 
-                            <span style={{ marginRight: '10px', cursor: 'pointer' }} onClick={() => handlDotRes(2)} className={secondsForRes === 2 && 'bigIcon'} >.</span>
+                            <span style={{ marginRight: '10px', cursor: 'pointer' }} onClick={() => handlDotRes(2)} className={secondsForRes === 2 && 'bigIconRes'} >.</span>
 
-                            <span style={{ marginRight: '10px', cursor: 'pointer' }} onClick={() => handlDotRes(3)} className={secondsForRes === 3 && 'bigIcon'} >.</span>
+                            <span style={{ marginRight: '10px', cursor: 'pointer' }} onClick={() => handlDotRes(3)} className={secondsForRes === 3 && 'bigIconRes'} >.</span>
+
+                            <span style={{ marginRight: '10px', cursor: 'pointer' }} onClick={() => handlDotRes(4)} className={secondsForRes === 4 && 'bigIconRes'} >.</span>
+
+                            <span style={{ marginRight: '10px', cursor: 'pointer' }} onClick={() => handlDotRes(5)} className={secondsForRes === 5 && 'bigIconRes'} >.</span>
+
+                            <span style={{ marginRight: '10px', cursor: 'pointer' }} onClick={() => handlDotRes(6)} className={secondsForRes === 6 && 'bigIconRes'} >.</span>
                         </div>
                     </div>
                 </div>
