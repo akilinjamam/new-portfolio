@@ -26,9 +26,6 @@ const Admin = ({ setMakeInvisible, timer, setControlPanel }) => {
             preserveAspectRatio: 'xMidYMid slice'
         }
     };
-
-
-
     const handleSubmit = (e) => {
         e.preventDefault();
         if (process.env.REACT_APP_EMAIL_ID === e.target.email.value && process.env.REACT_APP_PASSWORD_ID === e.target.password.value) {
@@ -92,4 +89,5 @@ const Admin = ({ setMakeInvisible, timer, setControlPanel }) => {
         </div>
     );
 };
+
 export default Admin;
