@@ -3,7 +3,7 @@ import './Admin.css';
 import flower from '../../flower.json'
 import angry from '../../angry.json'
 import Lottie from 'react-lottie';
-import secretData from '../../secret'
+
 
 const Admin = ({ setMakeInvisible, timer, setControlPanel }) => {
 
@@ -27,11 +27,11 @@ const Admin = ({ setMakeInvisible, timer, setControlPanel }) => {
         }
     };
 
-    console.log(secretData)
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (secretData.mainEmail === e.target.email.value && secretData.mainPassword === e.target.password.value) {
+        if (process.env.REACT_APP_EMAIL_ID === e.target.email.value && process.env.REACT_APP_PASSWORD_ID === e.target.password.value) {
             console.log('matched');
             setViewSmile(true);
 
