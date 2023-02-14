@@ -29,7 +29,9 @@ const Projects = () => {
     let link1 = "https://the-royal-autoparts.web.app/"
     let link2 = "https://exertion-7d317.firebaseapp.com/"
     let link3 = "https://travelbea-80478.firebaseapp.com/"
-
+    let link4 = "https://super-froyo-9cd0c4.netlify.app/"
+    let link5 = "https://heroic-croissant-3591cc.netlify.app/"
+    let link6 = "https://friendly-marigold-ce415b.netlify.app/"
     const [counter, setCounter] = useState(800);
     const [view, setView] = useState(true);
     let [seconds, setSeconds] = useState(1);
@@ -38,7 +40,7 @@ const Projects = () => {
     const [projectNo, setProjectNo] = useState(1)
 
 
-    console.log(counter)
+
 
     if (seconds === 3) {
         setSeconds(1)
@@ -47,7 +49,7 @@ const Projects = () => {
         setSecondsForRes(1)
 
     }
-    console.log(secondsForRes)
+
     useEffect(() => {
         const interval = setInterval(() => {
             setSeconds(seconds => seconds + 1);
@@ -207,7 +209,7 @@ const Projects = () => {
                                 <h3>Avatar from Dicebear</h3>
                                 <p>Here you can see different avatars which is taken from Dice bear API</p>
 
-                                <button onClick={() => handleClick(link1)} className='project-button'> visit website </button>
+                                <button onClick={() => handleClick(link4)} className='project-button'> visit website </button>
                             </div>
                         </div>
                     }
@@ -221,7 +223,7 @@ const Projects = () => {
                             <p>
                                 This is very small project where you can choose four watch and if you click on the button choose one for me then it will pick one from four.
                             </p>
-                            <button onClick={() => handleClick(link2)} className='project-button'> visit website </button>
+                            <button onClick={() => handleClick(link5)} className='project-button'> visit website </button>
                         </div>
                     </div>
                     }
@@ -237,7 +239,7 @@ const Projects = () => {
                                     this is a simple calculator where you can do basic calculations.
                                 </p>
 
-                                <button onClick={() => handleClick(link3)} className='project-button'> visit website </button>
+                                <button onClick={() => handleClick(link6)} className='project-button'> visit website </button>
                             </div>
                         </div>
                     }
