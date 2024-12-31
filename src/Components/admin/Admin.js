@@ -3,10 +3,11 @@ import './Admin.css';
 import flower from '../../flower.json'
 import angry from '../../angry.json'
 import Lottie from 'react-lottie';
+import { useNavigate } from 'react-router';
 
 
 const Admin = ({ setMakeInvisible, timer, setControlPanel }) => {
-
+    const navigate = useNavigate()
     const [viewSmile, setViewSmile] = useState(false);
     const [viewAngry, setViewAngry] = useState(false);
 
@@ -33,9 +34,11 @@ const Admin = ({ setMakeInvisible, timer, setControlPanel }) => {
             setViewSmile(true);
 
             setTimeout(() => {
-                setControlPanel(true);
-                setMakeInvisible(false);
-                setViewSmile(false)
+                // setControlPanel(true);
+                // setMakeInvisible(false);
+                // setViewSmile(false)
+                navigate('/controll-panel')
+
             }, 6000)
         } else {
             setViewAngry(true)

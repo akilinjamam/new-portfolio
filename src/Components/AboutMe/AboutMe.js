@@ -34,7 +34,8 @@ const AboutMe = ({ colors }) => {
 
                     <div className='aboutMeDetail'>
                         <div data-aos="fade-right" data-aos-duration="1000" >
-                            <p>Hi! this is Injamam Islam Chowdhury. I am a MERN stack Developer. From Last year I have been coding with javascript, reactJs, redux, nodeJs, expressJs, mongoDB, Nextjs. I have done more projects with that technologies. I have also completed a full course with the technologies. I have got lots of experience doing those project. I am confident about my skills. So Now I am ready to deliver.    </p>
+
+                            <p>Hi! this is Injamam Islam Chowdhury. I am a MERN stack Developer. From Last year I have been coding with javascript, reactJs, redux, nodeJs, expressJs, mongoDB, Nextjs. I have done more projects with that technologies. I have also completed a full course with the technologies. I have got lots of experience doing those project. I am confident about my skills. So Now I am ready to deliver.</p>
                             <br />
                             <p>
                                 I am used to take any challenges for doing any type of project. I am quick learner with heard worker, have dedication for problem solving. I am comfortable and confident to make successfull any mission.
@@ -43,6 +44,13 @@ const AboutMe = ({ colors }) => {
                             <p>
                                 I am very dedicated, passionate dynamic, punctual and time-concern about building my carrer in this sector.
                             </p>
+                            <br />
+                            <p style={{ color: 'yellow' }}>Educational Background :</p>
+                            <p>
+                                I Have Graduated in BBA with Major Management from Govt. City College Chittagong. Also I have completed MBA in Same Subject.
+                                I am also student of Cost and Management Accounting (ICMAB) in Operation Level.
+                            </p>
+                            <br />
                         </div>
                         <br /><br />
                         <div data-aos="fade-up" data-aos-duration="1000" className='aboutMe-button'>

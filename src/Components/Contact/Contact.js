@@ -7,7 +7,7 @@ import emailjs from 'emailjs-com';
 
 const Contact = () => {
 
-    const SERVICE_ID = "service_89yyi6b";
+    const SERVICE_ID = "service_o0q6qpm";
     const TEMPLATE_ID = "template_tgb207d";
     const USER_ID = "Z7jltzwCEHJwhT676";
 
@@ -50,10 +50,10 @@ const Contact = () => {
                                 control={Input}
                                 label='Email'
                                 name='to_name'
-                                placeholder='Email…'
                                 required
                                 icon='mail'
                                 iconPosition='left'
+                                value="akilinjamam@gmail.com"
                             />
                             <Form.Field
                                 id='form-input-control-last-name'

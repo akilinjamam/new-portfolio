@@ -1,15 +1,16 @@
 import React from 'react';
 import './Navbar.css'
+import { useNavigate } from 'react-router';
 
 const Navbar = ({ handleColors, setMakeInvisible, makeInvisible, timer, setTimer }) => {
 
-
+    const navigate = useNavigate()
 
     const handleCounter = () => {
 
         if (!makeInvisible) {
             setMakeInvisible(true);
-            console.log('hello')
+
         }
         setTimeout(() => {
             setMakeInvisible(false)
@@ -51,7 +52,12 @@ const Navbar = ({ handleColors, setMakeInvisible, makeInvisible, timer, setTimer
                         <li><i className="uil uil-dashboard"></i></li>
                     </a>
                 </a>
-                <a onClick={handleColors} href=" " title='theme'>
+                <a className='noneForRes' href="#blog">
+                    <a href="#blog" title='Blog'>
+                        <li><i class="uil uil-blogger"></i></li>
+                    </a>
+                </a>
+                <a onClick={handleColors} href="#theme" title='theme'>
                     <li><i className="uil uil-palette"></i></li>
                 </a>
 

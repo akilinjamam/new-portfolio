@@ -1,11 +1,12 @@
 .projects {
-    width: 100%;
+    max-width: 1200px;
     height: 100vh;
+    margin:auto
 
 }
 
 .projects-main {
-    width: 85%;
+    width: 100%;
     height: 80vh;
     margin: auto;
     display: flex;

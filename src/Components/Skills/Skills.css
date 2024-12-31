@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
 .skill {
-    width: 100%;
+    max-width: 1200px;
     height: 100vh;
+    margin:auto
 }
 
 .skill-h2 {
@@ -31,7 +32,7 @@
     /* position: relative; */
     max-width: 400px;
     width: 100%;
-    height: 120px;
+    height: 170px;
     border: 2px solid orange;
     margin: auto;
     padding: 10px 20px;

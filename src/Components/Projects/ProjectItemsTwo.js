@@ -3,11 +3,11 @@ import React from 'react';
 import websiteOne from '../../imagesProjectsTwo/avatar-from-daisy-bear.png'
 import websiteTwo from '../../imagesProjectsTwo/watch-gallery.png'
 import websitethree from '../../imagesProjectsTwo/simple-calculator.png'
-
+import websiteFour from '../../resource/Screenshot 2023-02-27 064604.png'
 
 const ProjectItemsTwo = ({ handleClick, setProjectNo, setSeconds }) => {
 
-    let link1 = "https://super-froyo-9cd0c4.netlify.app/"
+    let link1 = "https://lambent-torrone-f7e51d.netlify.app/"
     let link2 = "https://heroic-croissant-3591cc.netlify.app/"
     let link3 = "https://friendly-marigold-ce415b.netlify.app/"
     return (
@@ -15,11 +15,11 @@ const ProjectItemsTwo = ({ handleClick, setProjectNo, setSeconds }) => {
             <div className='projects-main'>
                 <div data-aos="fade-right" data-aos-duration="1000" className="project-container">
 
-                    <img className="project-img" src={websiteOne} alt="" />
+                    <img className="project-img" src={websiteFour} alt="" />
 
                     <div className="project-detail">
-                        <h3>Avatar from Dicebear</h3>
-                        <p>Here you can see different avatars which is taken from Dice bear API</p>
+                        <h3>online MCQ test center</h3>
+                        <p>here you can give mcq test where you can customize subject time and quantity of questions</p>
 
                         <button onClick={() => handleClick(link1)} className='project-button'> visit website </button>
                     </div>
