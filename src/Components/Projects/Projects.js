@@ -70,7 +70,6 @@ const Projects = () => {
 
         if (view) {
             setTimeout(() => {
-                console.log('its working bro...');
                 window.open(link, " '_blank'")
                 setView(true)
             }, 3000)

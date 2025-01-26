@@ -7,14 +7,14 @@ const AboutMe = ({ colors }) => {
     // Function will execute on click of button
     const onButtonClick = () => {
         // using Java Script method to get PDF file
-        fetch('MERN Stack Developer Resume of Injamam Islam Chowdhury.pdf').then(response => {
+        fetch('Full-Stack Developer Resume of Injamam Islam Chowdhury.pdf').then(response => {
             response.blob().then(blob => {
                 // Creating new object of PDF file
                 const fileURL = window.URL.createObjectURL(blob);
                 // Setting various property values
                 let alink = document.createElement('a');
                 alink.href = fileURL;
-                alink.download = 'MERN Stack Developer Resume of Injamam Islam Chowdhury.pdf';
+                alink.download = 'Full-Stack Developer Resume of Injamam Islam Chowdhury.pdf';
                 alink.click();
             })
         })
@@ -25,7 +25,7 @@ const AboutMe = ({ colors }) => {
             <div className='webAboutMe'>
                 <h2 className='aboutMeMain-h2'>ABOUT ME</h2>
                 <br />
-                <p className='aboutMeMain-p'>My Introduction</p>
+                {/* <p className='aboutMeMain-p'>My Introduction</p> */}
                 <div className='aboutMeContainer'>
 
                     <div data-aos="zoom-in" data-aos-duration="1000" className='aboutMeImage'>
@@ -52,7 +52,7 @@ const AboutMe = ({ colors }) => {
                             </p>
                             <br />
                         </div>
-                        <br /><br />
+
                         <div data-aos="fade-up" data-aos-duration="1000" className='aboutMe-button'>
                             <button className={colors ? colors : 'blue'} onClick={onButtonClick}>Download CV <i class="uil uil-file"></i> </button>
                         </div>
@@ -61,13 +61,10 @@ const AboutMe = ({ colors }) => {
                 </div>
             </div>
 
-
-
-
             <div className='resAboutMe'>
                 <h2 className='aboutMeMain-h2'>ABOUT ME</h2>
                 <br />
-                <p className='aboutMeMain-p'>My Introduction</p>
+                {/* <p className='aboutMeMain-p'>My Introduction</p> */}
                 <div className='aboutMeContainer'>
 
                     <div className='aboutMeImage'>
@@ -91,7 +88,6 @@ const AboutMe = ({ colors }) => {
                             <button className={colors ? colors : 'blue'} onClick={onButtonClick}>Download CV <i class="uil uil-file"></i> </button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

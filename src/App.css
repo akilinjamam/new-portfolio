@@ -90,7 +90,7 @@ html {
 
 /* break points */
 
-@media screen and (min-width: 1281px) {
+/* @media screen and (min-width: 1281px) {
   #warning {
     display: none;
   }
@@ -136,4 +136,4 @@ html {
   #warning {
     display: block;
   }
-}
+} */

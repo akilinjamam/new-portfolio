@@ -2,7 +2,7 @@
 
 .skill {
     max-width: 1200px;
-    height: 100vh;
+    /* height: 100vh; */
     margin:auto
 }
 
@@ -13,7 +13,7 @@
 
 .skill-main {
     width: 85%;
-    height: 85vh;
+    /* height: 85vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,30 +162,31 @@
     transform: translateX(-50%) rotate(45deg);
 }
 
-.resSkill {
+
+.skill-main-res{
     display: none;
 }
 
-.webSkill {
+.skill-main {
     display: block;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 767px) {
 
-    .resSkill {
+    .skill {
+        height: auto;
+    }
+
+    /* .skill-main {
+        height: auto;
+    } */
+
+    .skill-main-res{
         display: block;
     }
 
-    .webSkill {
-        display: none;
-    }
-
-    .skill {
-        height: 220vh;
-    }
-
     .skill-main {
-        height: auto;
+        display: none;
     }
 
     .grid-container {
@@ -194,5 +195,32 @@
 
     .container {
         max-width: 240px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .skill {
+        height: auto;
+    }
+
+    /* .skill-main {
+        height: auto;
+    } */
+
+    .skill-main-res{
+        display: block;
+    }
+
+    .skill-main {
+        display: none;
+    }
+
+    .grid-container {
+        grid-template-columns: auto;
+    }
+
+    .container {
+        max-width: 440px;
     }
 }

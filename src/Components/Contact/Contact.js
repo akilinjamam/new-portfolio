@@ -79,10 +79,6 @@ const Contact = () => {
                 </div>
             </div>
 
-
-
-
-
             <div className='resContacts'>
                 <h2 className="contact-h2">CONTACT</h2>
                 <div className="contact-main">

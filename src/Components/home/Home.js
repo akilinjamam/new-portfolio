@@ -8,6 +8,7 @@ import Contact from "../Contact/Contact";
 import Warning from "../../Warning";
 import Admin from "../admin/Admin";
 import ShowBlog from "../showBlog/ShowBlog";
+import NewProjects from "../Projects/NewProjects";
 
 const Home = () => {
 
@@ -56,17 +57,17 @@ const Home = () => {
         <div className={colors ? colors : 'blue'}>
             <div className={makeInvisible ? 'none' : 'block'}>
                 <Navbar timer={timer} setTimer={setTimer} makeInvisible={makeInvisible} setMakeInvisible={setMakeInvisible} theme={theme} setTheme={setTheme} handleColors={handleColors} ></Navbar>
-                <div >
-
-                    <Navbar timer={timer} setTimer={setTimer} makeInvisible={makeInvisible} setMakeInvisible={setMakeInvisible} theme={theme} setTheme={setTheme} handleColors={handleColors} ></Navbar>
-                </div>
+                {/* <div >
+                    <Navbar timer={timer} setTimer={setTimer} makeInvisible={makeInvisible} setMakeInvisible={setMakeInvisible} theme={theme} setTheme={setTheme} handleColors={handleColors} >
+                    </Navbar>
+                </div> */}
                 <Hero colors={colors}></Hero>
                 <AboutMe colors={colors}></AboutMe>
-                <Projects></Projects>
+                <NewProjects />
                 <Skills></Skills>
                 <Contact></Contact>
-                <ShowBlog />
-                <Warning></Warning>
+                {/* <ShowBlog /> */}
+                {/* <Warning></Warning> */}
             </div>
             <div className={makeInvisible ? 'block' : 'none'}>
                 <Admin controlPanel={controlPanel} setControlPanel={setControlPanel} timer={timer} makeInvisible={makeInvisible} setMakeInvisible={setMakeInvisible}></Admin>

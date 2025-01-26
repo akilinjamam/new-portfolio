@@ -1,13 +1,13 @@
 .projects {
     max-width: 1200px;
-    height: 100vh;
-    margin:auto
-
+    height: auto;
+    margin:auto;
+   
 }
 
 .projects-main {
     width: 100%;
-    height: 80vh;
+    height: 500px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -83,13 +83,6 @@
     width: 124px;
 }
 
-.webProjects {
-    display: block
-}
-
-.resProjects {
-    display: none;
-}
 
 .mainDot {
     height: 50px;
@@ -116,25 +109,33 @@
     color: orange;
 }
 
+.project-main{
+    display:block;
+}
+.projects-main-res{
+    display: none;
+}
 
-@media screen and (max-width: 380px) {
 
-    .webProjects {
-        display: none;
-    }
+@media screen and (max-width: 767px) {
 
-    .resProjects {
-        display: block
-    }
 
     .projects {
         margin-top: 300px;
-        height: 90vh;
+        height: auto;
     }
 
     .projects-main {
         flex-wrap: wrap;
         justify-content: space-around;
+        height: auto;
+    }
+
+    .projects-main{
+        display:none;
+    }
+    .projects-main-res{
+        display: block;
     }
 
     .project-container {
@@ -145,6 +146,38 @@
 
     .project-img {
         width: 240px;
+        height: 150px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+
+    .projects {
+        margin-top: 300px;
+        height: auto;
+    }
+
+    .projects-main {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: auto;
+    }
+
+    .projects-main{
+        display:none;
+    }
+    .projects-main-res{
+        display: block;
+    }
+
+    .project-container {
+        height: 410px;
+        width: 340px;
+        margin-bottom: 30px;
+    }
+
+    .project-img {
+        width: 340px;
         height: 150px;
     }
 }

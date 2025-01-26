@@ -1,6 +1,7 @@
 .aboutMeMain {
-    height: 100vh;
+    height: 700px;
     width: 100%;
+    
 }
 
 .aboutMeMain-h2,
@@ -13,19 +14,29 @@
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
-    height: 80vh;
+    height: auto;
     margin: auto;
 
 }
 
+.aboutMeImage {
+    width: 50%;
+    height: 500px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
 .aboutMeImage img {
     width: 400px;
-    height: 400px;
     border-radius: 20px;
 }
 
 .aboutMeDetail {
-    width: 600px;
+    width: 50%;
+    height: 500px;
+    /* background-color: green; */
 }
 
 .aboutMeDetail p {
@@ -48,12 +59,8 @@
 }
 
 .aboutMeDetail button:active {
-
     height: 48px;
     width: 168px;
-
-
-
 }
 
 .aboutMe-button {
@@ -72,7 +79,7 @@
     display: none;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 767px) {
 
     .webAboutMe {
         display: none;
@@ -80,7 +87,7 @@
 
     .resAboutMe {
         display: block;
-        height: 180vh;
+        height: auto;
     }
 
 
@@ -90,6 +97,16 @@
 
     }
 
+    .aboutMeImage {
+        width: 50%;
+        height: 300px;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
     .aboutMeImage img {
         height: 230px;
         width: 230px;
@@ -97,7 +114,49 @@
     }
 
     .aboutMeDetail {
-        width: 280px;
+        width: 300px;
+        margin-left: 25px;
+        text-align: center;
+    }
+
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .webAboutMe {
+        display: none;
+    }
+
+    .resAboutMe {
+        display: block;
+        height: auto;
+    }
+
+
+    .aboutMeContainer {
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+
+    .aboutMeImage {
+        width: 70%;
+        height: auto;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .aboutMeImage img {
+        height: 430px;
+        width: 430px;
+        margin-bottom: 30px;
+    }
+
+    .aboutMeDetail {
+        margin-top: 50px;
+        width: 70%;
         margin-left: 25px;
         text-align: center;
     }
