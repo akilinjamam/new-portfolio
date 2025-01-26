@@ -103,6 +103,8 @@ Form {
     }
 
     .resContacts {
+        margin-top: 40px;
+        padding-bottom: 40px;
         display: block;
 
     }
@@ -119,6 +121,53 @@ Form {
 
     .contact-img img {
         width: 220px;
+        margin-bottom: 30px;
+    }
+
+
+
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .contacts {
+        height: auto;
+    }
+
+    .webContacts {
+        display: none;
+    }
+
+    .resContacts {
+        margin-top: 40px;
+        padding-bottom: 40px;
+        display: block;
+
+    }
+
+    .contact-main {
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+
+    .contact-detail {
+        width: 70%;
+    }
+
+    .contact-h2{
+        margin-bottom: 50px;
+    }
+
+    .contact-img{
+        width: 70%;
+        margin: auto;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-img img {
+        width: 420px;
         margin-bottom: 30px;
     }
 
