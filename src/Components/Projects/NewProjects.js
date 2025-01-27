@@ -4,9 +4,10 @@ import React from 'react';
 
 import './Projects.css';
 import ProjectItems from './ProjectItems';
+import { useNavigate } from 'react-router';
 
 const NewProjects = () => {
-
+    const navigate = useNavigate();
     return (
         <div className='projects forBlock' id='projects'>
             <br />
@@ -17,7 +18,7 @@ const NewProjects = () => {
             <div>
                 <ProjectItems />
                 <br />
-                <p style={{ textAlign: 'center', marginBottom: '50px', }} >
+                <p onClick={() => navigate('/allProjectClient')} style={{ textAlign: 'center', marginBottom: '50px', }} >
                     <p style={{ border: '2px solid orange', width: '130px', margin: 'auto', padding: '5px 10px', borderRadius: '10px', cursor: 'pointer' }}>View All Projects</p>
                 </p>
             </div>

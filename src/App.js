@@ -16,6 +16,7 @@ import CreateBlog from './Components/admin/blog/CreateBlog';
 import EditBlog from './Components/admin/blog/EditBlog';
 import SingleBlog from './Components/admin/blog/SingleBlog';
 import ProjectDetail from './Components/Projects/ProjectDetail';
+import AllProjectsClient from './Components/Projects/AllProjectClient';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='project-detail/:id' element={<ProjectDetail />} />
+        <Route path='allProjectClient' element={<AllProjectsClient />} />
         <Route path='/controll-panel' element={<ControlPanel />}>
           <Route index element={<AllProjects />} />
           <Route path='exp' element={<Experience />} />
