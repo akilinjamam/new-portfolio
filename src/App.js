@@ -15,6 +15,7 @@ import EditSkill from './Components/admin/skill/EditSkill';
 import CreateBlog from './Components/admin/blog/CreateBlog';
 import EditBlog from './Components/admin/blog/EditBlog';
 import SingleBlog from './Components/admin/blog/SingleBlog';
+import ProjectDetail from './Components/Projects/ProjectDetail';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
     <div className='App'>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='project-detail/:id' element={<ProjectDetail />} />
         <Route path='/controll-panel' element={<ControlPanel />}>
           <Route index element={<AllProjects />} />
           <Route path='exp' element={<Experience />} />

@@ -1,11 +1,12 @@
 import React from 'react';
 import { useGetProjectData } from '../fetch-middleware-data/useFetchData';
+import { useNavigate } from 'react-router';
 
 
 
 const ProjectItems = () => {
 
-
+    const navigate = useNavigate();
     const { projectData } = useGetProjectData()
 
     return (
@@ -23,7 +24,7 @@ const ProjectItems = () => {
                                     <h3>{item?.title}</h3>
                                     <p>{item?.description}</p>
 
-                                    <button className='project-button'> visit website </button>
+                                    <button onClick={() => navigate(`project-detail/${item?._id}`)} className='project-button'> visit website </button>
                                 </div>
                             </div>
                         )
