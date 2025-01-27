@@ -16,6 +16,10 @@ const NewProjects = () => {
             </div>
             <div>
                 <ProjectItems />
+                <br />
+                <p style={{ textAlign: 'center', marginBottom: '50px', }} >
+                    <p style={{ border: '2px solid orange', width: '130px', margin: 'auto', padding: '5px 10px', borderRadius: '10px', cursor: 'pointer' }}>View All Projects</p>
+                </p>
             </div>
         </div>
 

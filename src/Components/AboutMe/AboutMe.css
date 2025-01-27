@@ -24,7 +24,7 @@
     height: 500px;
     /* background-color: red; */
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
     
 }

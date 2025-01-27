@@ -171,9 +171,9 @@ const Hero = ({ colors }) => {
                         <div className='hero-documents'>
                             <h1 className='hero-documents-h1'>Injamam Islam Chowdhury</h1>
                             <br /><br />
-                            <p className='hero-documents-p'>______MERN Stack Developer </p>
+                            <p className='hero-documents-p'>______Full Stack Developer </p>
                             <br />
-                            <p className='hero-documents-p'>I am working as a MERN-Stack developer. I am very passionate and dedicated to my work.</p>
+                            <p className='hero-documents-p'>I am working as a Full-Stack developer. I am very passionate and dedicated to my work.</p>
                             <br /><br />
                             <div className='hero-Button'>
                                 <button onClick={() => handleClick(setView(true))} className={colors ? colors : 'blue'} >Say Hello <i class="uil uil-location-arrow"></i> </button>
