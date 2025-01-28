@@ -19,7 +19,11 @@ const SingleProject = () => {
             </div>
             <br />
             <p>Title: {findProject?.title}</p>
-            <p>Description: {findProject?.description}</p>
+            <div style={{ width: '100%', height: '200px', overflowX: 'hidden', overflowY: 'scroll', border: '1px solid gray', borderRadius: '5px', padding: '5px' }}>
+                <p>Description: <span dangerouslySetInnerHTML={{ __html: findProject?.description }}></span> </p>
+            </div>
+            <br />
+            <p>Link: {findProject?.link}</p>
         </div>
     );
 };

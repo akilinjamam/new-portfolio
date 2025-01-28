@@ -16,12 +16,14 @@ const ProjectDetail = () => {
         <div className='blue' style={{ height: '100vh', width: '100vw' }}>
             <div className='project-detail-container'>
                 <div className='project-detail-img'>
-                    <img src={project?.img} alt="" />
+                    <img width={600} height={600} src={project?.img} alt="" />
                 </div>
-                <div className='project-detail-info'>
+                <div className='project-detail-info blue'>
                     <br />
                     <h2>{project?.title}</h2>
-                    <p dangerouslySetInnerHTML={{ __html: project?.description }}></p>
+                    <div style={{ width: '100%', height: '450px', overflowX: 'hidden', overflowY: 'scroll', border: '1px solid gray', borderRadius: '5px', padding: '5px' }}>
+                        <p dangerouslySetInnerHTML={{ __html: project?.description }}></p>
+                    </div>
                     <br />
                     <Link target="_blank" to={project?.link} className='project-detail-button'>
                         <p style={{ textAlign: 'center', marginBottom: '50px', }} >

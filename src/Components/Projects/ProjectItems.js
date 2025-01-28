@@ -22,9 +22,11 @@ const ProjectItems = () => {
 
                                 <div className="project-detail">
                                     <h3>{item?.title}</h3>
-                                    <p>{item?.description}</p>
-
-                                    <button onClick={() => navigate(`project-detail/${item?._id}`)} className='project-button'> visit website </button>
+                                    <br />
+                                    <br />
+                                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'end', width: '100%' }}>
+                                        <button onClick={() => navigate(`project-detail/${item?._id}`)} className='project-button'> visit website </button>
+                                    </div>
                                 </div>
                             </div>
                         )
@@ -42,9 +44,11 @@ const ProjectItems = () => {
 
                                 <div className="project-detail">
                                     <h3>{item?.title}</h3>
-                                    <p>{item?.description}</p>
-
-                                    <button className='project-button'> visit website </button>
+                                    <br />
+                                    <br />
+                                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'end', width: '100%' }}>
+                                        <button onClick={() => navigate(`project-detail/${item?._id}`)} className='project-button'> visit website </button>
+                                    </div>
                                 </div>
                             </div>
                         )

@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { updloadCloudinaryImage } from '../../../cloudinary/uploadImage';
 import { useGetProjectData, usePostProjectData } from '../../fetch-middleware-data/useFetchData';
+import SimpleTextEditor from '../blog/SimpleTextEditor';
 
 const CreateProject = () => {
+
+    const [value, setValue] = useState('');
 
     const [imgHolder, setImageHolder] = useState('')
     console.log(imgHolder);
     const [uploading, setUploading] = useState(false);
     const [inputData, setInputData] = useState({
         title: '',
-        description: '',
         link: ''
     });
 
@@ -24,7 +26,7 @@ const CreateProject = () => {
             alert('please add title')
             return
         }
-        if (!inputData?.description) {
+        if (!value) {
             alert('please add description')
             return
         }
@@ -39,6 +41,7 @@ const CreateProject = () => {
 
         const data = {
             ...inputData,
+            description: value,
             img: imgHolder
         }
         addProject(data)
@@ -60,8 +63,8 @@ const CreateProject = () => {
                 <br /><br />
                 <input style={{ width: '200px', background: 'none', outline: 'none' }} type="text" name="" id="" placeholder='Add link' onChange={(e) => setInputData({ ...inputData, link: e.target.value })} />
                 <br /><br />
-                <input style={{ width: '200px', background: 'none', outline: 'none' }} type="text" name="" id="" placeholder='Add Description' onChange={(e) => setInputData({ ...inputData, description: e.target.value })} />
-                <br /><br />
+                <SimpleTextEditor value={value} setValue={setValue} />
+                <br />
                 <label style={{ backgroundColor: 'orange', padding: '2px 5px', fontWeight: 'bold', borderRadius: "2px", cursor: 'pointer' }} htmlFor="img">{uploading ? 'uploading...' : 'Add Image'}</label>
                 <input type="file" name="" id="img" style={{ opacity: '0' }} onChange={(e) => {
                     const img = e.target.files[0];

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { updloadCloudinaryImage } from '../../../cloudinary/uploadImage';
 import { useGetProjectData, useUpdateProjectData } from '../../fetch-middleware-data/useFetchData';
 import { useParams } from 'react-router';
+import SimpleTextEditor from '../blog/SimpleTextEditor';
 
 const EditProject = () => {
 
@@ -11,20 +12,24 @@ const EditProject = () => {
 
     const findProject = projectData?.data?.find(f => f?._id === id);
 
-
+    const [value, setValue] = useState('');
     const [imgHolder, setImageHolder] = useState('')
     console.log(imgHolder);
     const [uploading, setUploading] = useState(false);
     const [inputData, setInputData] = useState({
         title: '',
-        description: '',
+        link: ''
     });
 
     useEffect(() => {
         setInputData({
             title: findProject?.title,
-            description: findProject?.description
+            link: findProject?.link
         })
+    }, [findProject])
+
+    useEffect(() => {
+        setValue(findProject?.description)
     }, [findProject])
 
     const handleUpdateImage = (e, id) => {
@@ -48,7 +53,7 @@ const EditProject = () => {
         e.preventDefault();
         const data = {
             id: id,
-            data: inputData
+            data: { ...inputData, description: value }
         }
 
         updateProject(data)
@@ -67,7 +72,11 @@ const EditProject = () => {
             <form action="" onSubmit={handleSubmit}>
                 <input value={inputData?.title} style={{ width: '200px', background: 'none', outline: 'none' }} type="text" name="" id="" placeholder='Add website link' onChange={(e) => setInputData({ ...inputData, title: e.target.value })} />
                 <br /><br />
-                <input value={inputData?.description} style={{ width: '200px', background: 'none', outline: 'none' }} type="text" name="" id="" placeholder='Add Description' onChange={(e) => setInputData({ ...inputData, description: e.target.value })} />
+                <div style={{ width: '100%', height: '140px', overflowX: 'hidden', overflowY: 'scroll', border: '1px solid gray' }}>
+                    <SimpleTextEditor value={value} setValue={setValue} />
+                </div>
+                <br /><br />
+                <input value={inputData?.link} style={{ width: '200px', background: 'none', outline: 'none' }} type="text" name="" id="" placeholder='Add Link' onChange={(e) => setInputData({ ...inputData, link: e.target.value })} />
                 <br /><br />
                 <label style={{ backgroundColor: 'orange', padding: '2px 5px', fontWeight: 'bold', borderRadius: "2px", cursor: 'pointer' }} htmlFor="img">{uploading ? 'uploading...' : 'Add Image'}</label>
                 <input type="file" name="" id="img" style={{ opacity: '0' }} onChange={(e) => {
